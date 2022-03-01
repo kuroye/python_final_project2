@@ -9,7 +9,9 @@ class ImageView(View):
 
     def get(self, request):
 
-        return render(request, 'index.html')
+        image = Image.objects.get(id=2)
+
+        return render(request, 'index.html', context={'image':image})
 
     def post(self, request):
 
