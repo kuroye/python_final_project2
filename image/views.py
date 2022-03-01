@@ -21,6 +21,11 @@ class ImageView(View):
         if form.is_valid():
             form.save()
 
+            last_image = Image.objects.last()
+            print(last_image.image.url)
+
+            last_image.path = last_image.image.url
+            last_image.save()
 
             return redirect('/image', kwargs={'message': 'Upload successful'})
 
