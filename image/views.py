@@ -22,7 +22,7 @@ class ImageView(View):
             form.save()
 
             last_image = Image.objects.last()
-            print(last_image.image.url)
+            # print(last_image.image.url)
 
             last_image.path = last_image.image.url
             last_image.save()
