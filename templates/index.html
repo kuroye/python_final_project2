@@ -10,8 +10,8 @@
 <body>
 
 <div class="container d-flex flex-column mb-4 wrapper">
-    <h1>Hello</h1>
-    <img src="{{ image.image.url }}" alt="">
+    <h1>Hello final project</h1>
+    <img src="{{ image.image.url }}" alt="" width="400" height="400">
 
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -28,6 +28,15 @@
             </div>
         </div>
     </form>
+
+    <div>
+        <h4>predicted label</h4>
+        <p>{{ predicted_label }}</p>
+        <h4>true label</h4>
+        <p>{{ true_label }}</p>
+        <h4>sample image</h4>
+        <p>{{ sample_img }}</p>
+    </div>
 </div>
 
 </body>
